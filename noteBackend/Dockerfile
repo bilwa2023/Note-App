@@ -1,5 +1,5 @@
 # Use OpenJDK base image
-FROM openjdk:17-jdk-slim as build
+FROM openjdk:21-jdk-slim as build
 
 # Set working directory
 WORKDIR /app
@@ -19,7 +19,7 @@ COPY src src
 RUN ./mvnw clean package -DskipTests
 
 # Run stage
-FROM openjdk:17-jdk-slim
+FROM openjdk:21-jdk-slim
 WORKDIR /app
 
 # Copy the jar from build stage
