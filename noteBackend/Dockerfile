@@ -9,11 +9,11 @@ COPY mvnw .
 COPY .mvn .mvn
 COPY pom.xml .
 
-# Download dependencies (caches Maven deps)
-RUN ./mvnw dependency:go-offline
-
+# Fix permissions for Maven wrapper
 RUN chmod +x ./mvnw
 
+# Download dependencies (cache layer)
+RUN ./mvnw dependency:go-offline
 
 # Copy source code
 COPY src src
@@ -28,7 +28,7 @@ WORKDIR /app
 # Copy the jar from build stage
 COPY --from=build /app/target/*.jar app.jar
 
-# Expose Render's dynamic port
+# Expose app port
 EXPOSE 8080
 
 # Start the app
