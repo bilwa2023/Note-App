@@ -12,6 +12,9 @@ COPY pom.xml .
 # Download dependencies (caches Maven deps)
 RUN ./mvnw dependency:go-offline
 
+RUN chmod +x ./mvnw
+
+
 # Copy source code
 COPY src src
 
