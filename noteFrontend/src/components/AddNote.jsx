@@ -17,7 +17,7 @@ function AddNote({ onNoteAdded }) {
 
   return (
     <div className="d-flex justify-content-center align-items-center mt-5">
-      <div className="card shadow-lg p-4" style={{ width: "50%" }}>
+      <div className="card shadow-lg p-4 add-note-card">
         <h3 className="text-center mb-4">Add Note</h3>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
