@@ -1,4 +1,4 @@
-package com.vivek.notes.exception;
+package com.note.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
