@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.note.entity.Note;
 import com.note.repository.NotesRepository;
-import com.vivek.notes.exception.NoteNotFoundException;
+import com.note.exception.NoteNotFoundException;
 
 @Service
 public class NotesServiceImpl implements NotesService{
